@@ -40,43 +40,42 @@
                 </div>
                 </div>
             <div class="row">
-                <div class="col-12 my-3">
+                <div class="col-12 my-2">
                     <p class="roomdata">Szoba oldalainak adatai:</p>
                 </div>
             </div>
             <div class="row">
 
             <div class="col-sm-3 col-md-3 ">
-                <p class="roomdata">1.Oldalfal</p>
-                <div class="form-floating"><input type="number" class="form-control"min="100" max="500" step="20" id="roomfirstpage">
-                <label for="roomfirstpage"> Fal hossza centiméterben</label></div>
-            </div>
-                <div class="col-sm-3 col-md-3 ">
-                    <p class="roomdata">2.Oldalfal</p>
-                    <div class="form-floating"><input type="number" class="form-control"min="100" max="500" step="20" id="roomsecondpage">
-                        <label for="roomsecondpage"> Fal hossza centiméterben</label></div>
+                <p class="roomscreen my-3">Szoba alakja</p>
+                <div class="form-floating">
+                    <select class="form-select" id="roomSelect">
+                        <option selected>Válasszon:</option>
+                        <option value="1">Kocka</option>
+                        <option value="2">Tégla</option>
+                        <option value="4">Egyéb</option>
+                    </select>
+                    <label for="roomSelect">Választott alak</label>
                 </div>
-                <div class="col-sm-3 col-md-3">
-                    <p class="roomdata">3.Oldalfal</p>
-                    <div class="form-floating"><input type="number" class="form-control"min="100" max="500" step="20" id="roomthirdpage">
-                        <label for="roomthirdpage"> Fal hossza centiméterben</label></div>
                 </div>
-                <div class="col-sm-3 col-md-3 ">
-                    <p class="roomdata">4.Oldalfal</p>
-                    <div class="form-floating">
-                        <input type="number" class="form-control"min="100" max="500" step="20" id="roomfourthpage">
-                        <label for="roomfourthpage"> Fal hossza centiméterben</label></div>
                 </div>
+            <div class="row"id="szobaszam">
+
             </div>
             <div class="row">
                 <div class="col-12 my-3">
                     <p class="roomdata"> Ajtók és ablakok adatai</p>
                 </div>
-                <div class="col-md-6">
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-floating">
+                <input type="number" class="form-control"min="100" max="500" step="20" id="doorchange">
+                <label for="doorchange"> Ajtók száma:</label>
 
                 </div>
-                <div class="col-md-6">
-
+                <div class="col-md-6 form-floating">
+                    <input type="number" class="form-control"min="100" max="500" step="20" id="windowchange">
+                    <label for="windowchange"> Ablakok száma</label>
                 </div>
 
 
@@ -84,5 +83,31 @@
         </form>
 
     </div>
+
+<script>
+    "use strict"
+
+    const items=document.getElementById("roomSelect");
+    items.addEventListener('click',function(){
+var szam=document.getElementById("roomSelect").value;
+        let plus=``;
+if(szam>0)
+{
+    for(let i=0; i<szam;i++)
+    {
+        plus+=`<div class="col-sm-3 col-md-3">`;
+        plus+=`<p class="roomscreen">`+(i+1)+`.Oldalfal</p>`;
+        plus+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
+                                              id="roomsecondpage">`;
+        plus+=` <label for="roomsecondpage"> Fal hossza centiméterben</label></div> </div>`;
+    }
+
+}
+document.getElementById("szobaszam").innerHTML=plus;
+   })
+
+</script>
+
+
 </body>
 </html>
