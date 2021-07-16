@@ -26,8 +26,63 @@
             <div class="col-12">
                 <p class="felhivas">Kérem a következö mezök teljes kitöltését</p>
             </div>
-
         </div>
+        <form action="interpretation.php" method="post">
+            <div class="row">
+                <div class="col-12">
+                    <p class="roomdata">Szoba magasság adata:</p>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-md-3 form-floating">
+                    <input type="number" class="form-control"min="100" max="500" step="20" id="roomHeight">
+                    <label for="roomHeight">Szoba magassága centiméterben</label>
+                </div>
+                </div>
+            <div class="row">
+                <div class="col-12 my-3">
+                    <p class="roomdata">Szoba oldalainak adatai:</p>
+                </div>
+            </div>
+            <div class="row">
+
+            <div class="col-sm-3 col-md-3 ">
+                <p class="roomdata">1.Oldalfal</p>
+                <div class="form-floating"><input type="number" class="form-control"min="100" max="500" step="20" id="roomfirstpage">
+                <label for="roomfirstpage"> Fal hossza centiméterben</label></div>
+            </div>
+                <div class="col-sm-3 col-md-3 ">
+                    <p class="roomdata">2.Oldalfal</p>
+                    <div class="form-floating"><input type="number" class="form-control"min="100" max="500" step="20" id="roomsecondpage">
+                        <label for="roomsecondpage"> Fal hossza centiméterben</label></div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <p class="roomdata">3.Oldalfal</p>
+                    <div class="form-floating"><input type="number" class="form-control"min="100" max="500" step="20" id="roomthirdpage">
+                        <label for="roomthirdpage"> Fal hossza centiméterben</label></div>
+                </div>
+                <div class="col-sm-3 col-md-3 ">
+                    <p class="roomdata">4.Oldalfal</p>
+                    <div class="form-floating">
+                        <input type="number" class="form-control"min="100" max="500" step="20" id="roomfourthpage">
+                        <label for="roomfourthpage"> Fal hossza centiméterben</label></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 my-3">
+                    <p class="roomdata"> Ajtók és ablakok adatai</p>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+
+                </div>
+
+
+            </div>
+        </form>
+
     </div>
 </body>
 </html>
