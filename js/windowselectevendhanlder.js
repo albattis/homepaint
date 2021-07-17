@@ -151,14 +151,14 @@ function rectagle()
 {
     html+=`<div class="row"><div class="col-sm-12 col-md-12 my-2">`;
     html+=`<p class="roomscreen">`+ablakszamlalo+`.ablak magassága</p>`;
-    html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
+    html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+windowsrectagle[countrectagle]+`">`;
 
     html+=` <label for="`+windowsrectagle[countrectagle]+`"> Ablak magassága centiméterben</label></div> </div>`;
     countrectagle++;
     html+=`<div class="col-sm-12 col-md-12 my-2">`;
     html+=`<p class="roomscreen">`+ablakszamlalo+`.ablak szélessége</p>`;
-    html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
+    html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+windowsrectagle[countrectagle]+`">`;
 
     html+=` <label for="`+windowsrectagle[countrectagle]+`"> Ablak szélessége centiméterben</label></div> </div>`;
@@ -169,7 +169,7 @@ function circles()
 {
     html+=`<div class="col-sm-12 col-md-12 my-2">`;
     html+=`<p class="roomscreen">`+ablakszamlalo+`.ablak átmérője</p>`;
-    html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
+    html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+windowscircle[circle]+`">`;
 
     html+=` <label for="`+windowscircle[circle]+`"> Ablak átmérője centiméterben</label></div> </div>`;

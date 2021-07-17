@@ -25,14 +25,14 @@ doors.addEventListener('click',function (){
     {
         html+=`<div class="col-sm-6 col-md-6 my-2">`;
         html+=`<p class="roomscreen">`+(i+1)+`.ajtó magassága</p>`;
-        html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
+        html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+door[count]+`">`;
         count++;
         html+=` <label for="`+door[count]+`"> Ajtó magassága centiméterben</label></div> </div>`;
 
         html+=`<div class="col-sm-6 col-md-6 my-2">`;
         html+=`<p class="roomscreen">`+(i+1)+`.ajtó szélessége</p>`;
-        html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
+        html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+door[count]+`">`;
 
         html+=` <label for="`+door[count]+`"> Ajtó szélessége centiméterben</label></div> </div>`;

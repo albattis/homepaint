@@ -37,7 +37,7 @@ items.addEventListener('click',function(){
 
             plus+=`<div class="col-sm-6 col-md-6 my-2">`;
             plus+=`<p class="roomscreen">`+(i+1)+`.Oldalfal</p>`;
-            plus+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
+            plus+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+id+`">`;
             plus+=` <label for="`+id+`"> Fal hossza centiméterben</label></div> </div>`;
         }
