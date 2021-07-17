@@ -5,7 +5,7 @@
  */
 const items=document.getElementById("roomSelect");
 items.addEventListener('click',function(){
-    var szam=document.getElementById("roomSelect").value;
+    let szam=document.getElementById("roomSelect").value;
     let plus=``;
     let egy="roomfirstpage";
     let ketto="roomsecondpage";
@@ -34,7 +34,7 @@ items.addEventListener('click',function(){
             }
 
 
-            plus+=`<div class="col-sm-3 col-md-3 my-2">`;
+            plus+=`<div class="col-sm-6 col-md-6 my-2">`;
             plus+=`<p class="roomscreen">`+(i+1)+`.Oldalfal</p>`;
             plus+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
                                               id="`+id+`">`;

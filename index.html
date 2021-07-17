@@ -35,7 +35,7 @@
             </div>
                 <div class="row">
                     <div class="col-sm-3 form-floating">
-                        <input type="number" class="form-control"min="100" max="500" step="20" id="roomHeight">
+                        <input type="number" class="form-control" min="100" max="500" step="20" id="roomHeight">
                         <label for="roomHeight">Szoba magassága centiméterben</label>
                     </div>
                 </div>
@@ -58,16 +58,16 @@
                         </div>
                 </div>
             </div>
-            <div class="row"id="szobaszam">
+            <div class="row g-2" id="szobaszam">
 
             </div>
             <div class="row">
                 <div class="col-12 my-3">
-                    <p class="roomdata"> Ajtók és ablakok adatai</p>
+                    <p class="roomdata"> Ajtók adatai</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3 col-md-3 ">
+                <div class="col-sm-4 col-md-6 ">
                     <p class="roomscreen col-12 my-3">Ajtók száma</p>
                         <div class="form-floating">
                             <select class="form-select" id="doorSelect">
@@ -88,11 +88,32 @@
             <div class="row" id="Door">
 
             </div>
-                <div class="col-sm-6 form-floating">
-                    <input type="number" class="form-control"min="1" max="7" id="windowchange">
-                    <label for="windowchange"> Ablakok száma</label>
+            <div class="row">
+                <div class="col-12 my-3">
+                    <p class="roomdata"> Ablakok adatai</p>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 ">
+                    <p class="roomscreen col-12 my-3">Ablakok száma</p>
+                    <div class="form-floating">
+                        <select class="form-select" id="windowSelect">
+                            <option selected>Válasszon:</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <label for="windowSelect">Ablakok száma</label>
+                    </div>
+                </div>
+            </div>
+        <div class="row" id="Window">
 
+        </div>
 
 
         </form>
@@ -100,7 +121,52 @@
     </div>
 
     <script src="js/roomwall.js"></script>
+    <script src="js/doorcount.js"></script>
 <script>
+
+    "use strict"
+
+    let windows=[
+        'firstwindow',
+        'secondwindow',
+        'thirdwindow',
+        'fourthwindow',
+        'fivethwindow',
+        'sixthwindow',
+        'seventhwindow'
+    ];
+    let darab=[
+        'elso',
+        `masodik`,
+        'harmadik',
+        'negyedik'
+    ];
+
+
+    const ablak=document.getElementById('windowSelect');
+    ablak.addEventListener('click',function (){
+        let count=ablak.value;
+        let szamlalo=0;
+        let code='';
+
+        for (let i = 0; i <count ; i++) {
+            code+=`<div class="col-sm-6 col-md-6">`;
+            code+=`<p class="roomscreen col-12 my-3">Ablak alakja</p>`;
+            code+=`<div class="form-floating">`;
+            code+=`<select class="form-select" id="`+windows[i]+`">`;
+            code+=`<option selected>Válasszon:</option>`;
+            code+=`<option value="1">Téglalap</option>`;
+            code+=`<option value="2">Kőr</option>`;
+            code+=`</select>`;
+            code+=`<label for="`+windows[i]+`">Ablak alakja</label>`;
+            code+=` </div>`;
+            code+=`<div class="col-12" id="`+windows[i]+`">`;
+            code+=`</div></div>`;
+        }
+
+   document.getElementById('Window').innerHTML=code;
+    })
+
 
 </script>
 </body>
