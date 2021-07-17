@@ -4,7 +4,7 @@ h1,h3
 }
 body
 {
-    width:1200px;
+
     margin-left:auto;
     margin-right:auto;
 }
@@ -20,14 +20,11 @@ body
     border:2px solid darkblue;
     background-color: darkcyan;
     color:white;
-    width:500px;
     margin-left: auto;
     margin-right:auto;
 }
 .roomdata
 {
-
-   width:300px;
     border:2px solid darkgoldenrod;
     color:white;
     background: goldenrod;
@@ -36,7 +33,7 @@ body
 
 .roomscreen
 {
-    width:300px;
+
     border:2px solid darkgreen;
     color:white;
     background:green;

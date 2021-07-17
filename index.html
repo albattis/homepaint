@@ -20,13 +20,13 @@
             <div class="col-12">
                 <h3>Üdvözlöm a Festék Számoló programban</h3>
             </div>
-            </div>
+        </div>
             <hr>
             <div class="row">
-            <div class="col-12">
-                <p class="felhivas">Kérem a következö mezök teljes kitöltését</p>
+                <div class="col-12">
+                  <p class="felhivas">Kérem a következö mezök teljes kitöltését</p>
+                </div>
             </div>
-        </div>
         <form action="interpretation.php" method="post">
             <div class="row">
                 <div class="col-12">
@@ -34,31 +34,30 @@
                 </div>
             </div>
                 <div class="row">
-                <div class="col-md-3 form-floating">
-                    <input type="number" class="form-control"min="100" max="500" step="20" id="roomHeight">
-                    <label for="roomHeight">Szoba magassága centiméterben</label>
-                </div>
+                    <div class="col-sm-3 form-floating">
+                        <input type="number" class="form-control"min="100" max="500" step="20" id="roomHeight">
+                        <label for="roomHeight">Szoba magassága centiméterben</label>
+                    </div>
                 </div>
             <div class="row">
-                <div class="col-12 my-2">
+                <div class="col-sm-12 my-2">
                     <p class="roomdata">Szoba oldalainak adatai:</p>
                 </div>
             </div>
             <div class="row">
-
-            <div class="col-sm-3 col-md-3 ">
-                <p class="roomscreen my-3">Szoba alakja</p>
-                <div class="form-floating">
-                    <select class="form-select" id="roomSelect">
-                        <option selected>Válasszon:</option>
-                        <option value="1">Kocka</option>
-                        <option value="2">Tégla</option>
-                        <option value="4">Egyéb</option>
-                    </select>
-                    <label for="roomSelect">Választott alak</label>
+                <div class="col-sm-3 col-md-3 ">
+                    <p class="roomscreen col-12 my-3">Szoba alakja</p>
+                        <div class="form-floating">
+                            <select class="form-select" id="roomSelect">
+                                <option selected>Válasszon:</option>
+                                <option value="1">Kocka</option>
+                                <option value="2">Tégla</option>
+                                <option value="4">Egyéb</option>
+                            </select>
+                            <label for="roomSelect">Választott alak</label>
+                        </div>
                 </div>
-                </div>
-                </div>
+            </div>
             <div class="row"id="szobaszam">
 
             </div>
@@ -68,46 +67,41 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 form-floating">
-                <input type="number" class="form-control"min="100" max="500" step="20" id="doorchange">
-                <label for="doorchange"> Ajtók száma:</label>
-
+                <div class="col-sm-3 col-md-3 ">
+                    <p class="roomscreen col-12 my-3">Ajtók száma</p>
+                        <div class="form-floating">
+                            <select class="form-select" id="doorSelect">
+                                <option selected>Válasszon:</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>
+                            <label for="doorSelect">Ajtók száma</label>
+                        </div>
                 </div>
-                <div class="col-md-6 form-floating">
-                    <input type="number" class="form-control"min="100" max="500" step="20" id="windowchange">
+            </div>
+
+            <div class="row" id="Door">
+
+            </div>
+                <div class="col-sm-6 form-floating">
+                    <input type="number" class="form-control"min="1" max="7" id="windowchange">
                     <label for="windowchange"> Ablakok száma</label>
                 </div>
 
 
-            </div>
+
         </form>
 
     </div>
 
+    <script src="js/roomwall.js"></script>
 <script>
-    "use strict"
-
-    const items=document.getElementById("roomSelect");
-    items.addEventListener('click',function(){
-var szam=document.getElementById("roomSelect").value;
-        let plus=``;
-if(szam>0)
-{
-    for(let i=0; i<szam;i++)
-    {
-        plus+=`<div class="col-sm-3 col-md-3">`;
-        plus+=`<p class="roomscreen">`+(i+1)+`.Oldalfal</p>`;
-        plus+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="20"
-                                              id="roomsecondpage">`;
-        plus+=` <label for="roomsecondpage"> Fal hossza centiméterben</label></div> </div>`;
-    }
-
-}
-document.getElementById("szobaszam").innerHTML=plus;
-   })
 
 </script>
-
-
 </body>
 </html>
