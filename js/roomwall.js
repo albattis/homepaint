@@ -5,6 +5,7 @@
  */
 const items=document.getElementById("roomSelect");
 items.addEventListener('click',function(){
+    document.getElementById("szobaszam").innerHTML='';
     let szam=document.getElementById("roomSelect").value;
     let plus=``;
     let egy="roomfirstpage";

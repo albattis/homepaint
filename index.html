@@ -27,14 +27,14 @@
                   <p class="felhivas">Kérem a következö mezök teljes kitöltését</p>
                 </div>
             </div>
-        <form action="interpretation.php" method="post">
+        <form action="interpretation.php" method="get">
             <div class="row">
                 <div class="col-12">
                     <p class="roomdata">Szoba magasság adata:</p>
                 </div>
             </div>
                 <div class="row">
-                    <div class="col-sm-3 form-floating">
+                    <div class="col-sm-6 col-md-6 form-floating">
                         <input type="number" class="form-control" min="100" max="500" step="20" id="roomHeight">
                         <label for="roomHeight">Szoba magassága centiméterben</label>
                     </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3 col-md-3 ">
+                <div class="col-sm-6 col-md-6 ">
                     <p class="roomscreen col-12 my-3">Szoba alakja</p>
                         <div class="form-floating">
                             <select class="form-select" id="roomSelect">
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 col-md-6 ">
+                <div class="col-sm-6 col-md-6 ">
                     <p class="roomscreen col-12 my-3">Ajtók száma</p>
                         <div class="form-floating">
                             <select class="form-select" id="doorSelect">
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-6 ">
+                <div class="col-sm-6 col-md-6">
                     <p class="roomscreen col-12 my-3">Ablakok száma</p>
                     <div class="form-floating">
                         <select class="form-select" id="windowSelect">
@@ -115,59 +115,13 @@
 
         </div>
 
-
+            <button type="submit"class="btn btn-success">Adatok küldése</button>
         </form>
 
     </div>
 
     <script src="js/roomwall.js"></script>
     <script src="js/doorcount.js"></script>
-<script>
-
-    "use strict"
-
-    let windows=[
-        'firstwindow',
-        'secondwindow',
-        'thirdwindow',
-        'fourthwindow',
-        'fivethwindow',
-        'sixthwindow',
-        'seventhwindow'
-    ];
-    let darab=[
-        'elso',
-        `masodik`,
-        'harmadik',
-        'negyedik'
-    ];
-
-
-    const ablak=document.getElementById('windowSelect');
-    ablak.addEventListener('click',function (){
-        let count=ablak.value;
-        let szamlalo=0;
-        let code='';
-
-        for (let i = 0; i <count ; i++) {
-            code+=`<div class="col-sm-6 col-md-6">`;
-            code+=`<p class="roomscreen col-12 my-3">Ablak alakja</p>`;
-            code+=`<div class="form-floating">`;
-            code+=`<select class="form-select" id="`+windows[i]+`">`;
-            code+=`<option selected>Válasszon:</option>`;
-            code+=`<option value="1">Téglalap</option>`;
-            code+=`<option value="2">Kőr</option>`;
-            code+=`</select>`;
-            code+=`<label for="`+windows[i]+`">Ablak alakja</label>`;
-            code+=` </div>`;
-            code+=`<div class="col-12" id="`+windows[i]+`">`;
-            code+=`</div></div>`;
-        }
-
-   document.getElementById('Window').innerHTML=code;
-    })
-
-
-</script>
+    <script src="js/windowselect.js"></script>
 </body>
 </html>
