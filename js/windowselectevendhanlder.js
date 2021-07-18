@@ -32,11 +32,11 @@ let windowscircle=[
 let html='';
 let countrectagle=0;
 let circle=0;
-let i=0;
 let ablakszamlalo=0;
+let szam;
 const firstwindow=document.getElementById('firstwindow');
 firstwindow.addEventListener('click',function (){
-    let szam=document.getElementById('firstwindow').value;
+    szam=document.getElementById('firstwindow').value;
 ablakszamlalo=1;
     if(szam==1&&html=='')
     {
@@ -68,7 +68,7 @@ ablakszamlalo=2;
 })
 const thirdwindow=document.getElementById('thirdwindow');
 thirdwindow.addEventListener('click',function (){
-    let szam=document.getElementById('secondwindow').value;
+    let szam=document.getElementById('thirdwindow').value;
     ablakszamlalo=3;
     if(szam==1&&html=='')
     {
@@ -150,28 +150,33 @@ seventhwindow.addEventListener('click',function (){
 function rectagle()
 {
     html+=`<div class="row"><div class="col-sm-12 col-md-12 my-2">`;
-    html+=`<p class="roomscreen">`+ablakszamlalo+`.ablak magassága</p>`;
+    html+=`<p class="windowscreen">`+ablakszamlalo+`.ablak magassága</p>`;
     html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+windowsrectagle[countrectagle]+`">`;
 
     html+=` <label for="`+windowsrectagle[countrectagle]+`"> Ablak magassága centiméterben</label></div> </div>`;
     countrectagle++;
+    console.log(countrectagle);
     html+=`<div class="col-sm-12 col-md-12 my-2">`;
-    html+=`<p class="roomscreen">`+ablakszamlalo+`.ablak szélessége</p>`;
+    html+=`<p class="windowscreen">`+ablakszamlalo+`.ablak szélessége</p>`;
     html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+windowsrectagle[countrectagle]+`">`;
 
     html+=` <label for="`+windowsrectagle[countrectagle]+`"> Ablak szélessége centiméterben</label></div> </div>`;
     countrectagle++;
+
+    circle++;
 }
 
 function circles()
 {
     html+=`<div class="col-sm-12 col-md-12 my-2">`;
-    html+=`<p class="roomscreen">`+ablakszamlalo+`.ablak átmérője</p>`;
+    html+=`<p class="windowscreen">`+ablakszamlalo+`.ablak átmérője</p>`;
     html+=`<div class="form-floating"><input type="number" class="form-control" min="100" max="500" step="10"
                                               id="`+windowscircle[circle]+`">`;
 
     html+=` <label for="`+windowscircle[circle]+`"> Ablak átmérője centiméterben</label></div> </div>`;
     circle++;
+    countrectagle+=2;
+
 }

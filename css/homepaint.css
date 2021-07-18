@@ -4,16 +4,38 @@ h1,h3
 }
 body
 {
-
+    width:900px;
     margin-left:auto;
     margin-right:auto;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 820px) {
+    body {
+        width:auto;
+    }
 }
 .felhivas,.roomscreen,.roomdata,.container
 {
     margin-right: auto;
     margin-left: auto;
 }
+#osszegzes
+{
+    text-align: center;
+}
+#butt
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    background-color: darkorange;
+    height: 100px;
+    margin-top: 20px;
 
+}
 .felhivas
 {
     text-align: center;
@@ -38,4 +60,18 @@ body
     color:white;
     background:green;
     text-align:center;
+}
+.windowscreen
+{
+    border:2px solid darkcyan;
+    color:white;
+    background: cyan;
+    text-align: center;
+}
+.eredmeny
+{
+    border:2px solid darkred;
+    color:white;
+    background: indianred;
+    font-size: 120%;
 }

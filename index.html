@@ -18,7 +18,7 @@
         
         <div class="row">
             <div class="col-12">
-                <h3>Üdvözlöm a Festék Számoló programban</h3>
+                <h3>Üdvözlöm a Festék számoló programban</h3>
             </div>
         </div>
             <hr>
@@ -27,7 +27,8 @@
                   <p class="felhivas">Kérem a következö mezök teljes kitöltését</p>
                 </div>
             </div>
-        <form action="">
+        <div id="osszegzes" class="eredmeny"></div>
+        <form id="forms">
             <div class="row">
                 <div class="col-12">
                     <p class="roomdata">Szoba magasság adata:</p>
@@ -99,7 +100,7 @@
                     <p class="roomscreen col-12 my-3">Ablakok száma</p>
                     <div class="form-floating">
                         <select class="form-select" id="windowSelect">
-                            <option selected>Válasszon:</option>
+                            <option value="0" selected>Válasszon:</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -115,8 +116,8 @@
         <div class="row" id="Window">
 
         </div>
-            <input type="text" id="s" required>
-            <input type="submit" class="btn btn-success" onclick="osszegzes()">
+
+            <input type="button" id="butt"  value="Összegzés" onclick="osszegzes();">
         </form>
 
     </div>
